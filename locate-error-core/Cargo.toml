@@ -2,5 +2,9 @@
 name = "locate-error-core"
 version = "0.1.0"
 edition = "2024"
+description = "Types and utilities for locate-error"
+authors = ["Bryan Lee <brylee10.dev@gmail.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/brylee10/locate-error"
 
 [dependencies]

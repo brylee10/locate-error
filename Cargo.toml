@@ -2,7 +2,11 @@
 name = "locate-error"
 version = "0.1.0"
 edition = "2024"
+description = "Add location info to errors"
+authors = ["Bryan Lee <brylee10.dev@gmail.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/brylee10/locate-error"
 
 [dependencies]
-locate-error-derive = { path = "./locate-error-derive" }
-locate-error-core = { path = "./locate-error-core" }
+locate-error-derive = { version = "0.1.0", path = "locate-error-derive" }
+locate-error-core = { version = "0.1.0", path = "locate-error-core" }

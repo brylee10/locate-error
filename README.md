@@ -13,6 +13,11 @@ An output like the above is created by running the example program below but rep
 This is intended to supplement other crates such as `anyhow` which can provide context for errors. `snafu` is an alternative which has stable backtrace support.
 
 # Example Usage
+```
+[dependencies]
+locate-error = "0.1"
+```
+
 Before describing the components, an example gives more context on usage. A typical use with `thiserror` with nested errors would be:
 
 ```rust
@@ -76,3 +81,6 @@ This crate introduces only a few components:
 - The `location` macro which returns a `Location` corresponding to the call site
 
 Enum variants or structs that use the `#[locate_from]` attribute must also include a field of type `Location` which will be automatically populated with the location where the `From` trait is called. Since an additional field is added, `thiserror` attributes such as `#[error(transparent)]` do not work, so a display message must be provided.
+
+# License
+Licensed under Apache License 2.0 or MIT at your selection

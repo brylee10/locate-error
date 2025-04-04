@@ -24,6 +24,11 @@
 //! errors. `snafu` is an alternative which has stable backtrace support.
 //!
 //! # Example Usage
+//! ```
+//! [dependencies]
+//! locate-error = "0.1"
+//! ```
+//!
 //! Before describing the components, an example gives more context on usage. A typical use with
 //! `thiserror` with nested errors would be:
 //!
