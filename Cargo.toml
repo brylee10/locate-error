@@ -1,0 +1,8 @@
+[package]
+name = "locate-error"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+locate-error-derive = { path = "./locate-error-derive" }
+locate-error-core = { path = "./locate-error-core" }

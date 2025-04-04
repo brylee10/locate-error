@@ -1,0 +1,31 @@
+error: Locate requires structs to have only a 'source' field (with the #[locate_from] attribute) and a 'location' field
+ --> tests/it/struct_incorrect_fields.rs:7:10
+  |
+7 | #[derive(Locate)]
+  |          ^^^^^^
+  |
+  = note: this error originates in the derive macro `Locate` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: Locate requires structs to have a field named 'location' of type `locate_from::Location`
+  --> tests/it/struct_incorrect_fields.rs:16:10
+   |
+16 | #[derive(Locate)]
+   |          ^^^^^^
+   |
+   = note: this error originates in the derive macro `Locate` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: Locate requires exactly one field marked with #[locate_from], found 0
+  --> tests/it/struct_incorrect_fields.rs:23:10
+   |
+23 | #[derive(Locate)]
+   |          ^^^^^^
+   |
+   = note: this error originates in the derive macro `Locate` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: Locate requires exactly one field marked with #[locate_from], found 2
+  --> tests/it/struct_incorrect_fields.rs:29:10
+   |
+29 | #[derive(Locate)]
+   |          ^^^^^^
+   |
+   = note: this error originates in the derive macro `Locate` (in Nightly builds, run with -Z macro-backtrace for more info)

@@ -1,0 +1,31 @@
+error: Locate requires enums variants with the #[locate_from] attribute to have exactly two fields, one for the source and one for the location
+ --> tests/it/struct_variant_enum_incorrect_fields.rs:9:5
+  |
+9 |     Variant1 {
+  |     ^^^^^^^^
+
+error: Variants with #[locate_from] must have a field named 'location' of type `locate_from::Location`
+  --> tests/it/struct_variant_enum_incorrect_fields.rs:20:5
+   |
+20 |     Variant1 {
+   |     ^^^^^^^^
+
+error: Locate requires at least one variant with the #[locate_from] attribute (otherwise this macro is effectively a no-op)
+  --> tests/it/struct_variant_enum_incorrect_fields.rs:28:10
+   |
+28 | #[derive(Locate)]
+   |          ^^^^^^
+   |
+   = note: this error originates in the derive macro `Locate` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: Locate requires enums variants with the #[locate_from] attribute to have exactly two fields, one for the source and one for the location
+  --> tests/it/struct_variant_enum_incorrect_fields.rs:42:5
+   |
+42 |     Variant1 {
+   |     ^^^^^^^^
+
+error: Variants with #[locate_from] must have a field named 'location' of type `locate_from::Location`
+  --> tests/it/struct_variant_enum_incorrect_fields.rs:54:5
+   |
+54 |     Variant1 {
+   |     ^^^^^^^^
