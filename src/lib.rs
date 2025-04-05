@@ -10,7 +10,7 @@
 //! The goal is to help users have another resource to add useful context to error messages to
 //! avoid unhelpful messages where the display/debug info of the bottom most error is bubbled up
 //! without context.
-//! ```
+//! ```text
 //! $ cargo run
 //! Error: Program ended
 //! ```
@@ -24,7 +24,7 @@
 //! errors. `snafu` is an alternative which has stable backtrace support.
 //!
 //! # Example Usage
-//! ```
+//! ```text
 //! [dependencies]
 //! locate-error = "0.1"
 //! ```
@@ -79,7 +79,7 @@
 //! ```
 //!
 //! Which outputs
-//! ```
+//! ```text
 //! Exception raised in a local function
 //!         occurred at app/src/bin/locate_error.rs:40:19
 //!         occurred at app/src/bin/locate_error.rs:33:5

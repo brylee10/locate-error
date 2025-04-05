@@ -1,9 +1,9 @@
 /// Represents the location in a file, used for error reporting
 #[derive(Debug)]
 pub struct Location {
-    file: String,
-    line: u32,
-    column: u32,
+    pub file: String,
+    pub line: u32,
+    pub column: u32,
 }
 
 #[allow(clippy::new_without_default)]
@@ -11,18 +11,6 @@ impl Location {
     #[track_caller]
     pub fn new() -> Self {
         location!()
-    }
-
-    pub fn file(&self) -> &str {
-        &self.file
-    }
-
-    pub fn line(&self) -> u32 {
-        self.line
-    }
-
-    pub fn column(&self) -> u32 {
-        self.column
     }
 }
 
@@ -64,9 +52,9 @@ mod tests {
                 column: _
             }
         ));
-        assert_eq!(location.file(), file);
-        assert_eq!(location.line(), line + 1);
-        assert_eq!(location.column(), column);
+        assert_eq!(location.file, file);
+        assert_eq!(location.line, line + 1);
+        assert_eq!(location.column, column);
 
         let column = 24;
         let line = line!();
@@ -79,8 +67,8 @@ mod tests {
                 column: _
             }
         ));
-        assert_eq!(location.file(), file);
-        assert_eq!(location.line(), line + 1);
-        assert_eq!(location.column(), column);
+        assert_eq!(location.file, file);
+        assert_eq!(location.line, line + 1);
+        assert_eq!(location.column, column);
     }
 }

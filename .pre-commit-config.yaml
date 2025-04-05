@@ -1,0 +1,30 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: cargo-test-main
+        name: Run tests for main project
+        entry: cargo test --all-features
+        language: system
+        types: [rust]
+        pass_filenames: false
+        
+    -   id: cargo-test-core
+        name: Run tests for locate-error-core
+        entry: cargo test --all-features -p locate-error-core
+        language: system
+        types: [rust]
+        pass_filenames: false
+        
+    -   id: cargo-test-derive
+        name: Run tests for locate-error-derive
+        entry: cargo test --all-features -p locate-error-derive
+        language: system
+        types: [rust]
+        pass_filenames: false
+        
+    -   id: cargo-clippy
+        name: Clippy check
+        entry: cargo clippy --workspace --all-targets --all-features -- -D warnings
+        language: system
+        types: [rust]
+        pass_filenames: false
